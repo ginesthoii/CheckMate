@@ -1,23 +1,33 @@
-
-
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/905ead19-3392-4fe8-bbb6-8904cef3ae3b" alt="gif" width="600" height="600" style="border-radius:15px;"/>
+  <img src="https://github.com/user-attachments/assets/905ead19-3392-4fe8-bbb6-8904cef3ae3b" alt="CheckMate animation" width="560" style="border-radius:14px;"/>
 </p>
 
-<h1 align="center">
-CheckMate — PyBot Chess AI Coach
-</h1>
+<h1 align="center">CheckMate — PyBot Chess AI Coach</h1>
 
-<br>
+<p align="center">
+  <em>Play. Watch. Learn. An interactive chess coach built with Python + Pygame, powered by Stockfish.</em>
+</p>
 
-### An interactive chess coach written in Python with Pygame and powered by Stockfish.
-### Play against the bot, watch self-play, or train by turning on beginner-friendly coaching overlays:
-- Hints (H): Shows best-move arrows, explains blunders vs. better alternatives.
-- Openings (O): Highlights center squares and recommends early development.
-- Tactics (T): Warns about hanging (undefended) pieces.
-- Rationale panel: Explains why moves are good/bad in natural language.
+---
 
+## What it is
+CheckMate is a teaching-first chess app: you can play the bot, watch self-play, or train with beginner-friendly overlays. It explains blunders plainly, shows best-move arrows, highlights center control & development, and warns when you’ve left pieces hanging.
 
+### Highlights
+- Stockfish-backed evaluations + principal variation (multi-move plan)
+- Toggleable coaching overlays:
+  - **Hints (H):** Best-move arrows, blunder vs. better alternative
+  - **Openings (O):** Center control & early development tips
+  - **Tactics (T):** Undefended (“hanging”) piece warnings
+- Human vs Bot, **Self-play**, or **Bot vs Bot Duel**
+- Click-to-move with reselect support
+- Sidebar with eval bar, commentary, scoreboard
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8c8ef489-b939-445f-ada1-c6d9079e2a15" alt="Banner" height="500" width="500" style="border-radius:12px;"/>
+</p>
+
+---
 
 # Features
 - Full chessboard with PNG sprites (pieces-png/ folder included)
@@ -30,7 +40,7 @@ CheckMate — PyBot Chess AI Coach
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/87a6ec46-ce86-461f-bcd7-f7bafb46f9f8" alt="Banner" width="200" height="200" style="border-radius:15px;"/>
+  <img src="https://github.com/user-attachments/assets/52d17797-c503-499c-b7a7-42f1c98ad0ec" alt="Banner" height="500" width="500" style="border-radius:12px;"/>
 </p>
 
 ### Installation
@@ -64,6 +74,23 @@ Run with defaults (human as White):
 
 python3 play_pygame_pro.py --mode human --side white
 
+# Human as White
+python3 src/play_pygame_pro.py --mode human --side white
+
+# Watch AI self-play
+python3 src/play_pygame_pro.py --mode self
+
+# Bot vs Bot duel
+python3 src/play_pygame_pro.py --mode duel
+
+
+## Options
+	•	--side white|black — color (human mode)
+	•	--ms N — delay per bot move in ms (default 300)
+	•	--engine PATH — Stockfish path (overrides auto-detect)
+	•	--w N / --h N — optional window clamp if your monitor is small
+
+
 ### Modes
 	•	--mode human → Play against the bot
 	•	--mode self → Watch AI self-play
@@ -75,24 +102,14 @@ python3 play_pygame_pro.py --mode human --side white
 	•	--engine PATH → Explicit path to Stockfish (auto-detected if omitted)
 
 
-
-### Controls
-
-Key	Action
-H	Toggle Hints (best move arrow, blunder explanation)
-O	Toggle Openings coach (center + development highlights)
-T	Toggle Tactics coach (hanging pieces alerts)
-[ / ]	Slow down / speed up bot moves
-R	Reset board
-ESC	Quit
-
-
 ## Assets
 
 All chess piece sprites are loaded from /pieces-png/.
 The loader automatically handles aliases like rook.png, rook4.png, bpawn.png, etc.
 
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2ecf05c6-d4bf-4071-b10b-7013a9d79e3b" alt="Banner" height="500" width="500" style="border-radius:12px;"/>
+</p>
 
 ## How It Teaches
 - Explains your moves vs. engine best: “That was a blunder. Knight f3 was stronger because it develops a piece and controls the center.”
@@ -101,21 +118,26 @@ The loader automatically handles aliases like rook.png, rook4.png, bpawn.png, et
 - Shows a multi-move “Plan” (principal variation) for strategy context.
 
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fe20bd7a-0be7-4c57-9ed5-49d5b2e6ac8e" alt="Banner" height="500" width="500" style="border-radius:12px;"/>
+</p>
+
+
+
+
 
 ### MIT License.
 Stockfish engine is GPL and installed separately; this project does not redistribute it.
 
 
 
-![Image](https://github.com/user-attachments/assets/09e8e622-5bf0-4b26-a94d-ee5b6f298969)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8f9893cb-67cb-4d58-8bee-5701a3e82038" alt="Banner" height="400" width="400" style="border-radius:12px;"/>
+</p>
 
 
 
-<img width="1001" height="695" alt="Image" src="https://github.com/user-attachments/assets/8c8ef489-b939-445f-ada1-c6d9079e2a15" />
-<img width="1005" height="706" alt="Image" src="https://github.com/user-attachments/assets/52d17797-c503-499c-b7a7-42f1c98ad0ec" />
-<img width="992" height="662" alt="Image" src="https://github.com/user-attachments/assets/fe20bd7a-0be7-4c57-9ed5-49d5b2e6ac8e" />
-<img width="732" height="647" alt="Image" src="https://github.com/user-attachments/assets/6b8cff97-d515-4015-9b77-30c5454a2f80" />
-<img width="1001" height="697" alt="Image" src="https://github.com/user-attachments/assets/2ecf05c6-d4bf-4071-b10b-7013a9d79e3b" />
-<img width="1000" height="703" alt="Image" src="https://github.com/user-attachments/assets/8f9893cb-67cb-4d58-8bee-5701a3e82038" />
 
-![Image](https://github.com/user-attachments/assets/7161c6b4-fdfc-44c0-bc8b-53a5e705b42d)
+
+
